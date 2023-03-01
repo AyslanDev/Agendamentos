@@ -1,0 +1,70 @@
+*{
+    /* overflow-x: hidden;
+    overflow-Y: hidden; */
+}
+
+body{
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+#img_banner{       
+    background-image: url("../images/banner.jpg");
+}
+.bar_top{
+    height: 1.4Vh;
+    width: 100Vw;
+    background-color: white;
+}
+.btn_aqui{
+    color: whitesmoke !important;
+    border: 1px solid whitesmoke !important;
+}
+
+.btn_aqui:hover {
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+.full_screen{
+    background-color: #c9eec9;
+    width: 100Vw;
+    height: 100Vh;
+}
+
+.center{
+    text-align: center;
+}
+
+#btn_voltar:hover{
+    cursor: pointer;
+}
+
+.carrousel{
+    height: 70Vh !important;
+    width: 80Vw !important;    
+}
+
+.slide_carrousel{
+    height: 50Vh !important;
+    width: 60Vw !important;
+}
+
+.slide_carrousel_item{
+    height: 50Vh !important;
+    width: 60Vw !important;
+}
+
+.fundo_title{
+    background-color: aliceblue;
+}
+
+@media only screen and (max-width: 600px) {
+    .slide_carrousel{
+        height: 30Vh !important;
+        width: 80Vw !important;
+    }
+    .slide_carrousel_item{
+        height: 30Vh !important;
+        width: 100Vw !important;
+    }
+  }
