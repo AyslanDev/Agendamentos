@@ -7,10 +7,10 @@ use Exception;
 
 abstract class Conexao{
 
-    private $host = "localhost";
-    private $dbName = "db_agendamento_tenis";
-    private $password = "";
-    private $user = "root";
+    private $host = DBDATA["host"];
+    private $dbName = DBDATA["dbname"];
+    private $password = DBDATA["password"];
+    private $user = DBDATA["user"];
 
     public function connect()
     {

@@ -16,8 +16,7 @@ class HomeController extends Controller
 
         Controller::view("home", ["imagem1" => $data[0]["Imagem"], 
         "imagem2" => $data[1]["Imagem"], 
-        "imagem3" => $data[2]["Imagem"], 
-        "data" => $data_horarios]);
+        "imagem3" => $data[2]["Imagem"]]);
     }
 
 }

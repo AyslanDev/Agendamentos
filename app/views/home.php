@@ -47,7 +47,7 @@
             <select name="horario" class="form-control select-multiple" id="horario">
                 
             </select>
-            <?= $this->e($data); ?>
+            <!-- <?= $this->e($data); ?> -->
         </div>
     </div>
 </div>
