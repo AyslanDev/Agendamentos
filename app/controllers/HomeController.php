@@ -1,6 +1,8 @@
 <?php
 
 namespace app\controllers;
+
+use app\database\models\ModelHorarios;
 use app\database\models\ModelQuadra;
 class HomeController extends Controller
 {
@@ -8,13 +10,14 @@ class HomeController extends Controller
     public function home(){
 
         $quadra = new ModelQuadra;
+        $horarios = new ModelHorarios;
         $data = $quadra->get();
+        $data_horarios = $horarios->get();        
 
-        print_r("<pre>");
-        var_dump($data);
-        print_r("</pre>");
-
-        Controller::view("home", ["imagem1" => $data[0]["Imagem"], "imagem2" => $data[1]["Imagem"], "imagem3" => $data[2]["Imagem"]]);
+        Controller::view("home", ["imagem1" => $data[0]["Imagem"], 
+        "imagem2" => $data[1]["Imagem"], 
+        "imagem3" => $data[2]["Imagem"], 
+        "data" => $data_horarios]);
     }
 
 }

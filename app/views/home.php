@@ -21,7 +21,7 @@
                 </div>
             </div>            
            
-            <div class="card p-3">   
+            <div class="card p-3 mb-3">   
                 <div id="carouselExampleInterval" class="carousel slide slide_carrousel" data-bs-ride="carousel">
                     <div class="carousel-inner">                        
                         <div class="carousel-item active" data-bs-interval="10000">
@@ -44,7 +44,10 @@
                     </button>
                 </div>    
             </div> 
-           
+            <select name="horario" class="form-control select-multiple" id="horario">
+                
+            </select>
+            <?= $this->e($data); ?>
         </div>
     </div>
 </div>

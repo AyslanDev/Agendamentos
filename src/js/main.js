@@ -1,4 +1,7 @@
 $(document).ready(function() {  
+    $(".select-multiple").select2({
+        maximumSelectionLength: 16
+    });
     $(".show1").css("display", "none");
     $(".show2").css("display", "none");
     $(".show1").fadeIn(1500).delay(1000);
