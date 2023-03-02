@@ -49,6 +49,10 @@ body{
     width: 60Vw !important;
 }
 
+.green{
+    color: #075F2C;
+}
+
 .slide_carrousel_item{
     height: 50Vh !important;
     width: 60Vw !important;

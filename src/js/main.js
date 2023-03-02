@@ -1,13 +1,10 @@
-$(document).ready(function() {
+$(document).ready(function() {  
     $(".show1").css("display", "none");
     $(".show2").css("display", "none");
     $(".show1").fadeIn(1500).delay(1000);
     $(".show1").fadeOut(800, function(){
-        $(".show2").fadeIn(1500).delay(1000);
-        $(".show2").fadeOut(1200, function(){
-            let scrol = $("#area_escolha").offset().top;
-            $(window).scrollTop(scrol)
-        })
+    let scrol = $("#area_escolha").offset().top;
+    $(window).scrollTop(scrol)
     }); 
 });
 

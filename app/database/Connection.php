@@ -54,7 +54,7 @@ class Connection extends Conexao
         {
             while($row = $this->resultado($qr))
             {                
-                $data = $row;
+                $data[] = $row;
             }
         }        
         return $data;
