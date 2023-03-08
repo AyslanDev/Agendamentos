@@ -62,13 +62,71 @@ body{
     background-color: aliceblue;
 }
 
+.slider {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .slide.active {
+    opacity: 1;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slider-controls {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .prev-slide,
+  .next-slide {
+    padding: 10px 20px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .prev-slide:hover,
+  .next-slide:hover {
+    background-color: #ccc;
+  }
+
+  #card_carrousel{
+    height: 60Vh; 
+    width: 80Vw;
+  }
+
 @media only screen and (max-width: 600px) {
     .slide_carrousel{
-        height: 30Vh !important;
-        width: 80Vw !important;
+        height: 20Vh !important;
+        width: 100% !important;
     }
     .slide_carrousel_item{
-        height: 30Vh !important;
-        width: 100Vw !important;
+        height: 20Vh !important;
+        width: 100% !important;
     }
+    #card_carrousel{
+        height: 30Vh; 
+        width: 100Vw;
+    }    
   }

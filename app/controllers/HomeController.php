@@ -12,11 +12,19 @@ class HomeController extends Controller
         $quadra = new ModelQuadra;
         $horarios = new ModelHorarios;
         $data = $quadra->get();
-        $data_horarios = $horarios->get();        
+        $data_horarios = $horarios->get(); 
+        
+        foreach($data_horarios as $key => $values){
+
+            $dados["key".$key] = $values;
+
+            
+        }
 
         Controller::view("home", ["imagem1" => $data[0]["Imagem"], 
         "imagem2" => $data[1]["Imagem"], 
-        "imagem3" => $data[2]["Imagem"]]);
+        "imagem3" => $data[2]["Imagem"],
+        $dados]);
     }
 
 }

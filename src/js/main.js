@@ -9,12 +9,54 @@ $(document).ready(function() {
     let scrol = $("#area_escolha").offset().top;
     $(window).scrollTop(scrol)
     }); 
+
+    var slides = $('.slide');
+    var numSlides = slides.length;
+    var currentSlide = 0;
+
+    // Define a classe 'active' para o slide atual
+    slides.eq(currentSlide).addClass('active');
+
+    // Muda para o próximo slide
+    function nextSlide() {
+        slides.eq(currentSlide).removeClass('active');
+        currentSlide = (currentSlide + 1) % numSlides;
+        slides.eq(currentSlide).addClass('active');
+    }
+
+    // Muda para o slide anterior
+    function prevSlide() {
+        slides.eq(currentSlide).removeClass('active');
+        currentSlide = (currentSlide - 1 + numSlides) % numSlides;
+        slides.eq(currentSlide).addClass('active');
+    }
+
+    // Adiciona os eventos de clique aos botões de controle
+    $('.prev-slide').on('click', function() {
+        prevSlide();
+    });
+
+    $('.next-slide').on('click', function() {
+        nextSlide();
+    });
 });
 
 $(document).mousedown(function(e){
     if(e.button === 1){
         return false;
     }
+});
+
+$('img').click(function(){
+
+    let idImg = $(this).data('val');
+    
+    $.ajax({
+        dataType: 'json',
+        type: 'POST',
+        url: 'app/'
+    })
+
 });
 
 $("#btn_voltar").click(function(){

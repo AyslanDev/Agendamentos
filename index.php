@@ -8,6 +8,7 @@ $router = new Router(URL);
 $router->namespace("\app\controllers");
 
 $router->get("/", "HomeController:home");
+$router->get("app/api", "app/api/verificaHorarios.php");
 
 $router->dispatch();
 
